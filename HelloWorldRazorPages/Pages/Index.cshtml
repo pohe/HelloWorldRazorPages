@@ -2,8 +2,6 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Hej alle ";
-
-
 }
 
 <div class="text-center">
@@ -11,7 +9,9 @@
     <p>Learn  about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
     
     
-    <form method ="Post">
+    <form method="Post">
+        <label asp-for="@Model.Car.Name" class="control-label"></label>
+        <input asp-for="@Model.Car.Name" class="form-control"/>
         <input type="submit" value="Test Post request"/>
     </form>
     @for (int i = 0; i < 10; i++)

@@ -22,6 +22,7 @@ namespace HelloWorldRazorPages.Pages
             set { _name = value; }
         }
 
+        [BindProperty]
         public Car Car { get; set; }
 
         public IndexModel(ILogger<IndexModel> logger)
