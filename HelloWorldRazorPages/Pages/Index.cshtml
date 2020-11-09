@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Hej alle ";
+
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Razor pages</h1>
+    <p>Learn  about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
+    
+    <form method ="Post">
+        <input type="submit" value="Test Post request"/>
+    </form>
+    @for (int i = 0; i < 10; i++)
+    {
+
+        <p>@i@Model.Message</p>
+        <p>@Model.Name</p>
+        <p>@(
+               $"Bilens navn {Model.Car.Name} årstal {Model.Car.Year}" 
+           )</p>
+    }
+    
+</div>
