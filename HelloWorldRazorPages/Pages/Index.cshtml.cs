@@ -22,11 +22,17 @@ namespace HelloWorldRazorPages.Pages
             set { _name = value; }
         }
 
+
+        public string Address { get; set; }
+
+       
+
         [BindProperty]
         public Car Car { get; set; }
 
         public IndexModel(ILogger<IndexModel> logger)
         {
+            
             Car = new Car(){Name = "Toyota", Year = 2020};
             Message = "Hej fra index page model ";
             _logger = logger;
@@ -34,6 +40,7 @@ namespace HelloWorldRazorPages.Pages
 
         public void OnGet()
         {
+            Address = "Gade 123, 4000 Roskilde";
             _name = "Velkommen GET requetil Pouls hjemmeside";
         }
 
